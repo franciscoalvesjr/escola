@@ -1,0 +1,61 @@
+<h1>Listing instituicoes</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Logradouro</th>
+    <th>Numero</th>
+    <th>Complemento</th>
+    <th>Bairro</th>
+    <th>Cep</th>
+    <th>Cidade</th>
+    <th>Estado</th>
+    <th>Pais</th>
+    <th>Slogan</th>
+    <th>Configuracao</th>
+    <th>Modalidade</th>
+    <th>Rede</th>
+    <th>Esfera</th>
+    <th>Servico</th>
+    <th>Pagamento</th>
+    <th>Idioma</th>
+    <th>Nomediretor</th>
+    <th>Emaildiretor</th>
+    <th>Senha</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @instituicoes.each do |instituicao| %>
+  <tr>
+    <td><%= instituicao.nome %></td>
+    <td><%= instituicao.logradouro %></td>
+    <td><%= instituicao.numero %></td>
+    <td><%= instituicao.complemento %></td>
+    <td><%= instituicao.bairro %></td>
+    <td><%= instituicao.cep %></td>
+    <td><%= instituicao.cidade %></td>
+    <td><%= instituicao.estado.nome %></td>
+    <td><%= instituicao.pais.nome %></td>
+    <td><%= instituicao.slogan %></td>
+    <td><%= instituicao.configuracao.descricao %></td>
+    <td><%= instituicao.modalidade.descricao %></td>
+    <td><%= instituicao.rede.descricao %></td>
+    <td><%= instituicao.esfera.descricao %></td>
+    <td><%= instituicao.servico.nivel %></td>
+    <td><%= instituicao.pagamento.forma %></td>
+    <td><%= instituicao.idioma.nome %></td>
+    <td><%= instituicao.nomediretor %></td>
+    <td><%= instituicao.emaildiretor %></td>
+    <td><%= instituicao.senha %></td>
+    <td><%= link_to 'Show', instituicao %></td>
+    <td><%= link_to 'Edit', edit_instituicao_path(instituicao) %></td>
+    <td><%= link_to 'Destroy', instituicao, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Instituicao', new_instituicao_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nivel: MyString
+  descricao: MyString
+  valormensal: 1.5
+  valoranual: 1.5
+
+two:
+  nivel: MyString
+  descricao: MyString
+  valormensal: 1.5
+  valoranual: 1.5

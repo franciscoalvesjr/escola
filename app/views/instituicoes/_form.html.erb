@@ -1,0 +1,115 @@
+<%= form_for(@instituicao) do |f| %>
+  <% if @instituicao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@instituicao.errors.count, "error") %> prohibited this instituicao from being saved:</h2>
+
+      <ul>
+      <% @instituicao.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :logradouro %><br />
+    <%= f.text_field :logradouro %>
+  </div>
+  <div class="field">
+    <%= f.label :numero %><br />
+    <%= f.text_field :numero %>
+  </div>
+  <div class="field">
+    <%= f.label :complemento %><br />
+    <%= f.text_field :complemento %>
+  </div>
+  <div class="field">
+    <%= f.label :bairro %><br />
+    <%= f.text_field :bairro %>
+  </div>
+  <div class="field">
+    <%= f.label :cep %><br />
+    <%= f.text_field :cep %>
+  </div>
+  <div class="field">
+    <%= f.label :cidade %><br />
+    <%= f.text_field :cidade %>
+  </div>
+  <div class="field">
+    <%= f.label :estado_id %><br />
+    <!--<%= f.text_field :estado_id %>-->
+    <%= f.collection_select(:estado_id, Estado.order('nome'), :id, :nome, {:prompt => true}) %>
+  
+  </div>
+  <div class="field">
+    <%= f.label :pais_id %><br />
+    <!--<%= f.text_field :pais_id %>-->
+  <%= f.collection_select(:pais_id, Pais.order('nome'), :id, :nome, {:prompt => true}) %>
+  
+  </div>
+  <div class="field">
+    <%= f.label :slogan %><br />
+    <%= f.text_field :slogan %>
+  </div>
+  <div class="field">
+    <%= f.label :configuracao_id %><br />
+    <!--<%= f.text_field :configuracao %>-->
+    <%= f.collection_select(:configuracao_id, Configuracao.order('id'), :id, :descricao, {:prompt => true}) %>
+  
+  </div>
+  <div class="field">
+    <%= f.label :modalidade_id %><br />
+    <!--<%= f.text_field :modalidade_id %>-->
+    <%= f.collection_select(:modalidade_id, Modalidade.order('id'), :id, :descricao, {:prompt => true}) %>
+  
+  </div>
+  <div class="field">
+    <%= f.label :rede_id %><br />
+    <!--<%= f.text_field :rede_id %>-->
+    <%= f.collection_select(:rede_id, Rede.order('id'), :id, :descricao, {:prompt => true}) %>
+   
+  </div>
+  <div class="field">
+    <%= f.label :esfera_id %><br />
+    <!--<%= f.text_field :esfera_id %>-->
+    <%= f.collection_select(:esfera_id, Esfera.order('id'), :id, :descricao, {:prompt => true}) %>
+   
+  </div>
+  <div class="field">
+    <%= f.label :servico_id %><br />
+    <!--<%= f.text_field :servico_id %>-->
+    <%= f.collection_select(:servico_id, Servico.order('id'), :id, :nivel, {:prompt => true}) %>
+  
+  </div>
+  <div class="field">
+    <%= f.label :pagamento_id %><br />
+    <!--<%= f.text_field :pagamento_id %>-->
+    <%= f.collection_select(:pagamento_id, Pagamento.order('id'), :id, :forma, {:prompt => true}) %>
+  
+  </div>
+  <div class="field">
+    <%= f.label :idioma_id %><br />
+    <!--<%= f.text_field :idioma_id %>-->
+    <%= f.collection_select(:idioma_id, Idioma.order('id'), :id, :nome, {:prompt => true}) %>
+  
+  </div>
+  <div class="field">
+    <%= f.label :nomediretor %><br />
+    <%= f.text_field :nomediretor %>
+  </div>
+  <div class="field">
+    <%= f.label :emaildiretor %><br />
+    <%= f.text_field :emaildiretor %>
+  </div>
+  <div class="field">
+    <%= f.label :senha %><br />
+    <%= f.text_field :senha %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

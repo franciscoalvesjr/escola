@@ -1,0 +1,105 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @instituicao.nome %>
+</p>
+
+<p>
+  <b>Logradouro:</b>
+  <%= @instituicao.logradouro %>
+</p>
+
+<p>
+  <b>Numero:</b>
+  <%= @instituicao.numero %>
+</p>
+
+<p>
+  <b>Complemento:</b>
+  <%= @instituicao.complemento %>
+</p>
+
+<p>
+  <b>Bairro:</b>
+  <%= @instituicao.bairro %>
+</p>
+
+<p>
+  <b>Cep:</b>
+  <%= @instituicao.cep %>
+</p>
+
+<p>
+  <b>Cidade:</b>
+  <%= @instituicao.cidade %>
+</p>
+
+<p>
+  <b>Estado:</b>
+  <%= @instituicao.estado.nome %>
+</p>
+
+<p>
+  <b>Pais:</b>
+  <%= @instituicao.pais.nome %>
+</p>
+
+<p>
+  <b>Slogan:</b>
+  <%= @instituicao.slogan %>
+</p>
+
+<p>
+  <b>Configuracao:</b>
+  <%= @instituicao.configuracao.descricao %>
+</p>
+
+<p>
+  <b>Modalidade:</b>
+  <%= @instituicao.modalidade.descricao %>
+</p>
+
+<p>
+  <b>Rede:</b>
+  <%= @instituicao.rede.descricao %>
+</p>
+
+<p>
+  <b>Esfera:</b>
+  <%= @instituicao.esfera.descricao %>
+</p>
+
+<p>
+  <b>Nivelservico:</b>
+  <%= @instituicao.servico.nivel %>
+</p>
+
+<p>
+  <b>Formapagamento:</b>
+  <%= @instituicao.pagamento.forma %>
+</p>
+
+<p>
+  <b>Idioma:</b>
+  <%= @instituicao.idioma.nome %>
+</p>
+
+<p>
+  <b>Nomediretor:</b>
+  <%= @instituicao.nomediretor %>
+</p>
+
+<p>
+  <b>Emaildiretor:</b>
+  <%= @instituicao.emaildiretor %>
+</p>
+
+<p>
+  <b>Senha:</b>
+  <%= @instituicao.senha %>
+</p>
+
+
+<%= link_to 'Edit', edit_instituicao_path(@instituicao) %> |
+<%= link_to 'Back', instituicoes_path %>

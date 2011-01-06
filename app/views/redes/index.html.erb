@@ -1,0 +1,23 @@
+<h1>Listing redes</h1>
+
+<table>
+  <tr>
+    <th>Descricao</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @redes.each do |rede| %>
+  <tr>
+    <td><%= rede.descricao %></td>
+    <td><%= link_to 'Show', rede %></td>
+    <td><%= link_to 'Edit', edit_rede_path(rede) %></td>
+    <td><%= link_to 'Destroy', rede, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rede', new_rede_path %>

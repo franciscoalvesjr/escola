@@ -1,0 +1,45 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: MyString
+  logradouro: MyString
+  numero: 1
+  complemento: MyString
+  bairro: MyString
+  cep: MyString
+  cidade: MyString
+  estado: MyString
+  pais: MyString
+  slogan: MyString
+  configuração: MyString
+  modalidade: MyString
+  rede: MyString
+  esfera: MyString
+  nivelservico: MyString
+  formapagamento: MyString
+  dioma: MyString
+  nomediretor: MyString
+  emaildiretor: MyString
+  senha: MyString
+
+two:
+  nome: MyString
+  logradouro: MyString
+  numero: 1
+  complemento: MyString
+  bairro: MyString
+  cep: MyString
+  cidade: MyString
+  estado: MyString
+  pais: MyString
+  slogan: MyString
+  configuração: MyString
+  modalidade: MyString
+  rede: MyString
+  esfera: MyString
+  nivelservico: MyString
+  formapagamento: MyString
+  dioma: MyString
+  nomediretor: MyString
+  emaildiretor: MyString
+  senha: MyString

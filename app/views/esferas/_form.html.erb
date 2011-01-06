@@ -1,0 +1,21 @@
+<%= form_for(@esfera) do |f| %>
+  <% if @esfera.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@esfera.errors.count, "error") %> prohibited this esfera from being saved:</h2>
+
+      <ul>
+      <% @esfera.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :descricao %><br />
+    <%= f.text_field :descricao %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

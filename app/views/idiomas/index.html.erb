@@ -1,0 +1,23 @@
+<h1>Listing idiomas</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @idiomas.each do |idioma| %>
+  <tr>
+    <td><%= idioma.nome %></td>
+    <td><%= link_to 'Show', idioma %></td>
+    <td><%= link_to 'Edit', edit_idioma_path(idioma) %></td>
+    <td><%= link_to 'Destroy', idioma, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Idioma', new_idioma_path %>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nivel:</b>
+  <%= @servico.nivel %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @servico.descricao %>
+</p>
+
+<p>
+  <b>Valormensal:</b>
+  <%= @servico.valormensal %>
+</p>
+
+<p>
+  <b>Valoranual:</b>
+  <%= @servico.valoranual %>
+</p>
+
+
+<%= link_to 'Edit', edit_servico_path(@servico) %> |
+<%= link_to 'Back', servicos_path %>

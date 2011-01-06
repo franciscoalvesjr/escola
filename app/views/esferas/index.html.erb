@@ -1,0 +1,23 @@
+<h1>Listing esferas</h1>
+
+<table>
+  <tr>
+    <th>Descricao</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @esferas.each do |esfera| %>
+  <tr>
+    <td><%= esfera.descricao %></td>
+    <td><%= link_to 'Show', esfera %></td>
+    <td><%= link_to 'Edit', edit_esfera_path(esfera) %></td>
+    <td><%= link_to 'Destroy', esfera, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Esfera', new_esfera_path %>
