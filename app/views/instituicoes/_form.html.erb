@@ -79,24 +79,30 @@
     <%= f.collection_select(:esfera_id, Esfera.order('id'), :id, :descricao, {:prompt => true}) %>
    
   </div>
-  <div class="field">
-    <%= f.label :servico_id %><br />
-    <!--<%= f.text_field :servico_id %>-->
-    <%= f.collection_select(:servico_id, Servico.order('id'), :id, :nivel, {:prompt => true}) %>
+ 
+  <!-- #################################################################################################### -->
+  <!-- Inicialmente, o servico sera free. Nao precisa perguntar e o idioma, Portugues-->
   
-  </div>
   <div class="field">
-    <%= f.label :pagamento_id %><br />
-    <!--<%= f.text_field :pagamento_id %>-->
-    <%= f.collection_select(:pagamento_id, Pagamento.order('id'), :id, :forma, {:prompt => true}) %>
-  
+    <!--<%= f.label :servico_id %><br />-->
+    <%= f.hidden_field :servico_id, { :value => "Basico" } %>
+    <!--<%= f.collection_select(:servico_id, Servico.order('id'), :id, :nivel, {:prompt => true}) %>-->
   </div>
+  
   <div class="field">
-    <%= f.label :idioma_id %><br />
-    <!--<%= f.text_field :idioma_id %>-->
-    <%= f.collection_select(:idioma_id, Idioma.order('id'), :id, :nome, {:prompt => true}) %>
-  
+    <!--<%= f.label :pagamento_id %><br />-->
+    <%= f.hidden_field :pagamento_id, { :value => "0.00" } %>
+    <!--<%= f.collection_select(:pagamento_id, Pagamento.order('id'), :id, :forma, {:prompt => true}) %>-->
   </div>
+  
+  <div class="field">
+    <!--<%= f.label :idioma_id %><br />-->
+    <%= f.hidden_field :idioma_id, { :value => "Portugues" } %>
+    <!--<%= f.collection_select(:idioma_id, Idioma.order('id'), :id, :nome, {:prompt => true}) %>-->
+  </div>
+  
+  <!-- #################################################################################################### -->
+  
   <div class="field">
     <%= f.label :nomediretor %><br />
     <%= f.text_field :nomediretor %>
